@@ -181,20 +181,19 @@ export function App () {
     setShownModal(false);
   };
 
- const onEscapePress = (event ) => {
-    if (event.code === "Escape")  {
-      closeModal("", "")
+  const onEscapePress = (event) => {
+    if (event.code === "Escape") {
+      closeModal();
     }
   };
-
+  
   useEffect(() => {
     window.addEventListener("keydown", onEscapePress);
     return () => {
       window.removeEventListener("keydown", onEscapePress);
-    }
-
+    };
   }, []);
-
+  
  
 
 

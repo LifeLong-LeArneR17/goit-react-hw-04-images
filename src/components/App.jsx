@@ -73,11 +73,7 @@ export function App () {
     setShownModal(false);
   };
 
-  const onEscapePress = (event) => {
-    if (event.code === "Escape") {
-      closeModal();
-    }
-  };
+
   
   useEffect(() => {
     const onEscapePress = (event) => {
@@ -91,7 +87,7 @@ export function App () {
     return () => {
       window.removeEventListener("keydown", onEscapePress);
     };
-  }, []); // Пустой массив зависимостей, так как onEscapePress не зависит от состояния или свойств
+  }, []); 
   
  
 

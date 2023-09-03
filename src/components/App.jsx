@@ -25,11 +25,11 @@ export function App () {
     const fetchData =  async () => {
       try {
         if (prevQueryRef.query !== query) {
-          setStatus("loading")
+          setStatus('loading')
           const result = await photoDataFetch(query);
           setPhotos(result);
-          setStatus(status);
           setPage(1);
+          setStatus('idle');
         }
       } catch (error) {
         setStatus('rejected');
@@ -38,7 +38,7 @@ export function App () {
     if (query !== '') {
       fetchData();
     }
-  }, [query, status]);
+  }, [query]);
 
   
 
@@ -114,4 +114,3 @@ export function App () {
       </div>
     );
   }
-

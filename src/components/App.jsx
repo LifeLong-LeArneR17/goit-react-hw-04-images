@@ -80,11 +80,18 @@ export function App () {
   };
   
   useEffect(() => {
+    const onEscapePress = (event) => {
+      if (event.code === "Escape") {
+        closeModal();
+      }
+    };
+  
     window.addEventListener("keydown", onEscapePress);
+  
     return () => {
       window.removeEventListener("keydown", onEscapePress);
     };
-  }, []);
+  }, []); // Пустой массив зависимостей, так как onEscapePress не зависит от состояния или свойств
   
  
 

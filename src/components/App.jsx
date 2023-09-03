@@ -16,6 +16,7 @@ export function App () {
   const [status, setStatus] = useState('idle');
   const [shownModal, setShownModal] = useState(false);
   const [error, setError] = useState(null);
+  
   const handleInputQuery = name => {
     setQuery(name)
   };

@@ -29,7 +29,7 @@ export function App () {
           setStatus("loading")
           const result = await photoDataFetch(query);
           setPhotos(result);
-          setStatus("idle");
+          setStatus(status);
           setPage(1);
         }
       } catch (error) {

@@ -15,7 +15,6 @@ export function App () {
   const [photos, setPhotos] = useState(null);
   const [status, setStatus] = useState('idle');
   const [shownModal, setShownModal] = useState(false);
-  const [error, setError] = useState(null);
   
   const handleInputQuery = name => {
     setQuery(name)
@@ -33,14 +32,13 @@ export function App () {
           setPage(1);
         }
       } catch (error) {
-        setError(error);
         setStatus('rejected');
       }
     }
     if (query !== '') {
       fetchData();
     }
-  }, [query]);
+  }, [query, status]);
 
   
 

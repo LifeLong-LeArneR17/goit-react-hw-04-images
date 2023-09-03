@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 import "./Modal.css"
 
-export const Modal = ({modalImg, imageAlt, openModal}) => {
-  return(<div className="Overlay"  onClick={() => openModal('', '')}>
+export const Modal = ({modalImg, imageAlt, closeModal}) => {
+  return(<div className="Overlay"  onClick={() => closeModal('', '')}>
   <div className="Modal" >
     <img src={modalImg} alt= {imageAlt} />
   </div>
